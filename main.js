@@ -1,5 +1,5 @@
 const file = await fetch(new URL("./example.json", import.meta.url))
-const contents = await file.json();
+const contents = await file.text();
 addEventListener("fetch", (event) => {
   event.respondWith(
     new Response(contents, {
